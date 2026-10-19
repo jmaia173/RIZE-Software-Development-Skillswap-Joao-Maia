@@ -101,6 +101,59 @@ header {
   margin-bottom: 1rem;
 }
 
+/* ===== Skill Cards ===== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+  color: #1e3a5f;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card .price {
+  font-weight: bold;
+  color: #2a9d8f;
+  margin-top: 0.5rem;
+}
+
+.skill-card .provider {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Hidden by default, shown when the card is expanded */
+.skill-card .details {
+  display: none;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #ddd;
+}
+
+.skill-card.expanded {
+  border: 2px solid #3a7bd5;
+}
+
+.skill-card.expanded .details {
+  display: block;
+}
+
 /* ===== Footer ===== */
 footer {
   text-align: center;
